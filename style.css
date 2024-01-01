@@ -1,0 +1,51 @@
+.see {
+  background: rgba(0, 0, 0, 0.5019607843);
+  border: 2px solid red;
+}
+
+.hide {
+  display: none;
+}
+
+.no-scroll {
+  height: 100%;
+  overflow-y: hidden;
+}
+
+body {
+  background: #D9D9D9;
+  position: relative;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 12vh;
+  position: sticky;
+  top: 0;
+}
+.navbar_logo {
+  margin-left: auto;
+  width: 22rem;
+}
+.navbar_burger {
+  width: calc(50% - 11rem);
+  height: 10vh;
+  aspect-ratio: 1;
+}
+.navbar_menu {
+  position: absolute;
+  right: 0;
+  width: 35vw;
+  height: 100vh;
+  z-index: 2;
+}
+
+.overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  filter: blur(4px);
+}/*# sourceMappingURL=style.css.map */
