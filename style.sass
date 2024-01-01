@@ -1,15 +1,23 @@
 // this is for dev
+
 .see
   background: #00000080
-  border: 2px solid red
+  outline: 2px solid red
 
 // color variables !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-$dark : #2C2C2C
-$light : #EAEAEA
-$grey : #D9D9D9
-$darkOrange : #AF3800
-$lightOrange : #fe321d
+$dark: #2C2C2C
+$light: #EAEAEA
+$grey: #D9D9D9
+$darkOrange: #AF3800
+$lightOrange: #FE621D
 
+// fonts !!!!!!!!!!!!!!!!!!!!!!!!!!!
+@font-face
+  font-family: "Jacques"
+  src: url(assets/fonts/JacquesFrancois-Regular.ttf) format('truetype')
+  font-weight: 400
+
+// Utilities !!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 .hide
   display: none
@@ -18,11 +26,18 @@ $lightOrange : #fe321d
   height: 100%
   overflow-y: hidden
 
+.blur
+  filter: blur(2px)
+
+
+
 
 
 body
   background: $grey
   position: relative
+  color: $light
+  font-family: Jacques
 
 // navbar !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 .navbar
@@ -31,27 +46,119 @@ body
   align-items: center
   height: 12vh
   position: sticky
-  top: 0   
+  top: 0
+  z-index: 9998
 
   &_logo
     margin-left: auto
-    width: 22rem
+    width: 22vw
+    user-select: none
+
   &_burger
-    width: calc(50% - 11rem)
+    width: calc(50% - 11vw)
     height: 10vh
     aspect-ratio: 1
-
 
   &_menu
     position: absolute
     right: 0
+    top: 0
     width: 35vw
     height: 100vh
-    z-index: 2
+    z-index: 9999
+    background: $light
 
-.overlay
-  position: absolute
-  width: 100vw
-  height: 100vh
-  z-index: 1 
-  filter: blur(4px)
+    &_title
+      width: 100%
+      height: 12vh
+      color: $dark
+      display: flex
+      justify-content: right
+      align-items: center
+      padding-inline: 5%
+
+    &_divider
+      width: 100%
+      height: 12vh
+      background: $dark
+
+    &_links
+      color: $dark
+
+      &_list
+
+        &_link
+          width: 100%
+          height: 12vh
+
+          a
+            padding-inline: 5%
+            display: flex
+            justify-content: right
+            align-items: center
+            width: 100%
+            height: 100%
+            text-decoration: none
+            color: $dark
+
+          &:visited
+            color: inherit
+
+          &:active
+            color: $darkOrange
+
+          &:hover
+            color: $darkOrange
+            text-decoration: underline
+
+    &_infos
+      color: $dark
+
+      &:hover
+        color: $darkOrange
+
+
+// main !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+.main
+  width: 100%
+
+  &_hero
+    display: flex
+    justify-content: space-around
+    align-items: center
+    background: $dark
+    height: 88vh
+
+    &_magazine
+      position: relative
+      // height: 100%
+      // width: 50%
+
+      &_image
+        position: relative
+        rotate: 14deg
+        z-index: 3
+        border: 4px solid $darkOrange
+        border-style: dashed
+        width: 20vw
+        user-select: none
+        pointer-events: none
+
+      &_card
+        position: absolute
+        top: 0
+        width: 100%
+        height: 100%
+
+        &--dark
+          rotate: 18deg
+          background: $darkOrange
+          z-index: 2
+
+        &--light
+          rotate: 22deg
+          background: $lightOrange
+          z-index: 1
+
+  // border style dashed for the magazine
