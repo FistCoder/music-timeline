@@ -1,8 +1,10 @@
 // this is for dev
 
-// .see
-//   background: #00000080
-//   outline: 2px solid red
+.see
+  background: #00000080
+  outline: 2px solid red
+.hide
+  display: none
 
 // color variables !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 $dark: #2C2C2C
@@ -19,21 +21,20 @@ $lightOrange: #FE621D
 
 // Utilities !!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-.hide
-  display: none
-
-.no-scroll
-  height: 100%
-  overflow-y: hidden
+// cont get to work the way i want
+// .no-scroll
+//   height: 100%
+//   overflow-y: hidden
 
 .blur
-  filter: blur(2px)
+  filter: blur(10px)
 
 body
   background: $grey
   position: relative
   color: $light
   font-family: Jacques
+  overflow-x: hidden
 
 // navbar !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 .navbar
@@ -56,21 +57,24 @@ body
     height: 10vh
     aspect-ratio: 1
 
+  // side Menu !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
   &_menu
     position: absolute
-    right: 0
     top: 0
     width: 35vw
     height: 100vh
     z-index: 9999
     background: $light
+    transition: right ease-in-out 1000ms, filter 1000ms linear
 
     &_title
       width: 100%
       height: 12vh
       color: $dark
       display: flex
-      justify-content: right
+      // justify-content: 
+      // margin-left: 50%
       align-items: center
       padding-inline: 5%
 
@@ -91,7 +95,8 @@ body
           a
             padding-inline: 5%
             display: flex
-            justify-content: right
+            // justify-content: right
+            // padding-left: 65%
             align-items: center
             width: 100%
             height: 100%
@@ -121,11 +126,11 @@ body
       a:hover
         background: $grey
 
-
 // main !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 .main
   width: 100%
+  transition: filter linear 500ms 
 
   &_hero
     display: flex
@@ -159,10 +164,12 @@ body
           rotate: 18deg
           background: $darkOrange
           z-index: 2
+          filter: blur(1px)
 
         &--light
           rotate: 22deg
           background: $lightOrange
           z-index: 1
+          filter: blur(2px)
 
   // border style dashed for the magazine

@@ -10,17 +10,17 @@
   </link>
   <title>Music Timeline</title>
 </head>
-<!-- DONT FORGET TO DELETE ALL THE "SEE" classes """ctrl F""" -->
+<!-- DONT FORGET TO DELETE ALL THE "" classes """ctrl F""" -->
 
-<body>
-  <nav class="navbar see">
-    <a class="navbar_logo see" href="#">
+<body id="body" class="no-sccroll">
+  <nav class="navbar ">
+    <a class="navbar_logo " href="#">
       <img src="assets/images/logo.png" alt="Music Timeline">
     </a>
-    <div class="navbar_burger see">
+    <div class="navbar_burger see " id="burger">
       <!-- TO DO, 3 SVG lines animation across the screen -->
     </div>
-    <div class="navbar_menu see">
+    <div class="navbar_menu  blur" id="sideMenu" data-toggle="closed" style="right: -37%;">
       <!-- the menu itself -->
       <div class="navbar_menu_title"> <span>Chose the Era you are interested in</span></div>
       <div class="navbar_menu_divider"></div>
@@ -36,7 +36,7 @@
       </div>
     </div>
   </nav>
-  <main class="main">
+  <main class="main" id="main">
     <hero class="main_hero">
       <div class="main_hero_text">
         <p>
@@ -49,7 +49,7 @@
           music genres evolved over the years
         </p>
       </div>
-      <div class="main_hero_magazine see">
+      <div class="main_hero_magazine ">
         <img class="main_hero_magazine_image" src="assets/images/magazine.png" alt="Image of a old Vintage Guitar Magazine">
         <div class="main_hero_magazine_card main_hero_magazine_card--dark"></div>
         <div class="main_hero_magazine_card main_hero_magazine_card--light"></div>
