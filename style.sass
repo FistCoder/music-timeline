@@ -1,8 +1,8 @@
 // this is for dev
 
-.see
-  background: #00000080
-  outline: 2px solid red
+// .see
+//   background: #00000080
+//   outline: 2px solid red
 
 // color variables !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 $dark: #2C2C2C
@@ -29,10 +29,6 @@ $lightOrange: #FE621D
 .blur
   filter: blur(2px)
 
-
-
-
-
 body
   background: $grey
   position: relative
@@ -48,6 +44,7 @@ body
   position: sticky
   top: 0
   z-index: 9998
+  background: $grey
 
   &_logo
     margin-left: auto
@@ -101,21 +98,28 @@ body
             text-decoration: none
             color: $dark
 
-          &:visited
-            color: inherit
-
-          &:active
-            color: $darkOrange
-
-          &:hover
+          a:hover
             color: $darkOrange
             text-decoration: underline
+            background: $grey
 
     &_infos
-      color: $dark
 
-      &:hover
-        color: $darkOrange
+      a
+        height: 16vh
+        display: flex
+        justify-content: right
+        align-items: center
+        padding-inline: 5%
+
+        svg
+          fill: $dark
+          height: 12vh
+
+      a:hover > svg
+        fill: $darkOrange
+      a:hover
+        background: $grey
 
 
 // main !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

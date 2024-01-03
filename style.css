@@ -1,8 +1,3 @@
-.see {
-  background: rgba(0, 0, 0, 0.5019607843);
-  outline: 2px solid red;
-}
-
 @font-face {
   font-family: "Jacques";
   src: url(assets/fonts/JacquesFrancois-Regular.ttf) format("truetype");
@@ -36,6 +31,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 9998;
+  background: #D9D9D9;
 }
 .navbar_logo {
   margin-left: auto;
@@ -89,21 +85,27 @@ body {
   text-decoration: none;
   color: #2C2C2C;
 }
-.navbar_menu_links_list_link:visited {
-  color: inherit;
-}
-.navbar_menu_links_list_link:active {
-  color: #AF3800;
-}
-.navbar_menu_links_list_link:hover {
+.navbar_menu_links_list_link a:hover {
   color: #AF3800;
   text-decoration: underline;
+  background: #D9D9D9;
 }
-.navbar_menu_infos {
-  color: #2C2C2C;
+.navbar_menu_infos a {
+  height: 16vh;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding-inline: 5%;
 }
-.navbar_menu_infos:hover {
-  color: #AF3800;
+.navbar_menu_infos a svg {
+  fill: #2C2C2C;
+  height: 12vh;
+}
+.navbar_menu_infos a:hover > svg {
+  fill: #AF3800;
+}
+.navbar_menu_infos a:hover {
+  background: #D9D9D9;
 }
 
 .main {
