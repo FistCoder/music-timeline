@@ -140,6 +140,7 @@ body {
   border: 4px solid #AF3800;
   border-style: dashed;
   height: 50vh;
+  aspect-ratio: 1;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -321,4 +322,16 @@ body {
 }
 .main_parallax_section--pop {
   z-index: 39;
+}
+.main_parallax_section--div16 {
+  z-index: 40;
+}
+.main_parallax_section--final {
+  z-index: 41;
+  flex-direction: column;
+  align-items: center;
+}
+.main_parallax_section--final > a {
+  width: 100%;
+  align-self: auto;
 }/*# sourceMappingURL=style.css.map */
